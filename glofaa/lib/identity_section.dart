@@ -99,9 +99,13 @@ class _IdentitySectionScreenState extends State<IdentitySectionScreen> {
                               fontSize: 15),
                         ),
                       ),
-                      const Icon(
-                        Icons.expand_more_rounded,
-                        size: 25,
+                      CircleAvatar(
+                        radius:20,backgroundColor: Colors.white,
+                        child: const Icon(
+
+                          Icons.expand_more_rounded,
+                          size: 25,
+                        ),
                       ),
                     ],
                   ),

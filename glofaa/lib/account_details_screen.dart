@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:glofaa/add_bank_details_screen.dart';
 
 class AccountDetailsScreen extends StatefulWidget {
+  @override
   const AccountDetailsScreen({super.key});
 
-  @override
   State<AccountDetailsScreen> createState() => _AccountDetailsScreenState();
 }
+
+
 
 class _AccountDetailsScreenState extends State<AccountDetailsScreen> {
   @override

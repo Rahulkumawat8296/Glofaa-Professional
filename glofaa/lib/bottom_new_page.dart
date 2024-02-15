@@ -12,7 +12,7 @@ class BottomNewScreen extends StatefulWidget {
 }
 
 List stepperScreens = [
-  const SessionScreen(),
+  const CustomStepper(),
   const StarterKitScreen(),
   const ProfileScreen(),
   const LiveTrainingScreen()

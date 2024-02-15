@@ -82,17 +82,26 @@ class _LoansScreenState extends State<LoansScreen> {
                             fontFamily: 'Poppins',
                             fontSize: 16),
                       ),
-                      trailing: IconButton(
-                        icon: const Icon(
-                          Icons.keyboard_arrow_right_outlined,
-                          color: Color.fromRGBO(147, 76, 234, 1),
-                        ),
-                        onPressed: () {
-                          onTap(index);
-                        },
+                      trailing:CircleAvatar(
+                            radius:20,
+                        backgroundColor: Colors.white,
+                        child: IconButton(
+                            icon: const Icon(
+
+                              Icons.keyboard_arrow_right_outlined,
+                              color: Color.fromRGBO(147, 76, 234, 1),
+
+                            ),
+                            onPressed: () {
+                              onTap(index);
+                            },
+                          ),
                       ),
-                    ),
-                  );
+                      ),
+
+                    );
+
+
                 },
               ),
             ),

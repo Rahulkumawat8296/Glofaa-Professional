@@ -35,14 +35,20 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  font_awesome_flutter: ^10.5.0
-  image_picker: ^1.0.4
-  permission_handler: ^11.0.1
-  table_calendar: ^3.0.9
-  intl: ^0.18.1
-  video_player: ^2.8.1
-  google_fonts:
+  font_awesome_flutter: ^10.7.0
+  image_picker: ^1.0.7
+  permission_handler: ^11.2.1
+  table_calendar: ^3.1.0
+  intl: ^0.19.0
+  video_player: ^2.8.2
+  google_fonts: ^6.1.0
   dotted_line: ^3.2.2
+  circular_countdown_timer: ^0.2.3
+  rflutter_alert: 2.0.7
+  sleek_circular_slider: ^2.0.1
+  semicircle_indicator: ^1.1.1
+
+
 
 dev_dependencies:
   flutter_test:

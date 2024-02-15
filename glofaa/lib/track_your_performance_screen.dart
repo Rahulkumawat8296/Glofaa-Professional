@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:glofaa/rating_screen.dart';
+import 'package:semicircle_indicator/semicircle_indicator.dart';
 
 class TrackYourPerformanceScreen extends StatefulWidget {
   const TrackYourPerformanceScreen({super.key});
@@ -114,7 +115,7 @@ class _TrackYourPerformanceScreenState
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor:
-                              const Color.fromRGBO(147, 76, 234, 1),
+                          const Color.fromRGBO(147, 76, 234, 1),
                           padding: const EdgeInsets.symmetric(horizontal: 10)),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -150,9 +151,52 @@ class _TrackYourPerformanceScreenState
                       ),
                     ),
                   ),
+
                 ],
               ),
             ),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 120.0),
+                child: SemicircularIndicator(
+                  color:Colors.orange,
+                  bottomPadding: 0,
+                  child:Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                    children: [
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left:40.0),
+                          child: Text("4.72",style:TextStyle(fontSize:20,color:Colors.black),),
+                        ),
+                      ),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left:40.0),
+                          child: Icon(Icons.star)
+                        ),
+                      ),
+                      Container(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left:40.0),
+                          child: Text("Moin:4.5"),
+                        ),
+                      ),
+
+
+
+                    ],
+
+                  ),
+
+
+                ),
+              ),
+            ],
+          ) ,
+
             Container(
               alignment: Alignment.center,
               margin: const EdgeInsets.only(top: 10),
@@ -170,6 +214,7 @@ class _TrackYourPerformanceScreenState
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
+
                     const Text(
                       'Rating',
                       style: TextStyle(
@@ -440,7 +485,7 @@ class _TrackYourPerformanceScreenState
                   width: 160,
                   height: 100,
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                  const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                   margin: const EdgeInsets.only(left: 10, right: 5, top: 10),
                 )
               ],
@@ -510,9 +555,9 @@ class _TrackYourPerformanceScreenState
                           },
                           style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  const Color.fromRGBO(147, 76, 234, 1),
+                              const Color.fromRGBO(147, 76, 234, 1),
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 10)),
+                              const EdgeInsets.symmetric(horizontal: 10)),
                           child: const Text(
                             'Buy Again',
                             style: TextStyle(
@@ -533,9 +578,9 @@ class _TrackYourPerformanceScreenState
                           },
                           style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  const Color.fromRGBO(147, 76, 234, 1),
+                              const Color.fromRGBO(147, 76, 234, 1),
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 10)),
+                              const EdgeInsets.symmetric(horizontal: 10)),
                           child: const Text(
                             'See Details',
                             style: TextStyle(
@@ -592,7 +637,7 @@ class _TrackYourPerformanceScreenState
             Center(
               child: Container(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 margin: const EdgeInsets.only(
                     left: 10, right: 10, top: 15, bottom: 15),
                 decoration: BoxDecoration(
@@ -624,388 +669,388 @@ class _TrackYourPerformanceScreenState
     return showModalBottomSheet(
         context: context,
         builder: (context) => Container(
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(20),
-                    topLeft: Radius.circular(20)),
-              ),
-              child: SingleChildScrollView(
-                child: Column(
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(20),
+                topLeft: Radius.circular(20)),
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 25,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    const SizedBox(
-                      height: 25,
+                    Text(
+                      'SMALL FSP PLAN 2023',
+                      style: TextStyle(
+                          color: Colors.orange,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Poppins',
+                          fontSize: 13),
                     ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text(
-                          'SMALL FSP PLAN 2023',
-                          style: TextStyle(
-                              color: Colors.orange,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: 'Poppins',
-                              fontSize: 13),
-                        ),
-                        Text(
-                          'VALID TILL 17 AUG,2023',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: 'Poppins',
-                              fontSize: 13),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    const Text(
-                      '23 of 40 jobs sent',
+                    Text(
+                      'VALID TILL 17 AUG,2023',
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Poppins',
-                          fontSize: 18),
+                          fontSize: 13),
                     ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    SizedBox(
-                      height: 30,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                          _displayViewJobsBottomSheet();
-                          /*Navigator.push(
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Text(
+                  '23 of 40 jobs sent',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'Poppins',
+                      fontSize: 18),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                SizedBox(
+                  height: 30,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      _displayViewJobsBottomSheet();
+                      /*Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
                                       const ChooseJobPackageScreen()));*/
-                        },
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                                const Color.fromRGBO(147, 76, 234, 1),
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 10)),
-                        child: const Text(
-                          'View Jobs',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: 'Poppins',
-                              fontSize: 13),
+                    },
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                        const Color.fromRGBO(147, 76, 234, 1),
+                        padding:
+                        const EdgeInsets.symmetric(horizontal: 10)),
+                    child: const Text(
+                      'View Jobs',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Poppins',
+                          fontSize: 13),
+                    ),
+                  ),
+                ),
+                const Padding(
+                  padding:
+                  EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+                  child: Text(
+                    'Maintain below criteria till 17 Aug to claim min guarantee refund',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'Poppins',
+                        fontSize: 14),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 15, vertical: 15),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.grey.shade200,
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x3F000000),
+                          blurRadius: 1,
                         ),
-                      ),
-                    ),
-                    const Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
-                      child: Text(
-                        'Maintain below criteria till 17 Aug to claim min guarantee refund',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Poppins',
-                            fontSize: 14),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 15),
-                      margin: const EdgeInsets.symmetric(horizontal: 10),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.grey.shade200,
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Color(0x3F000000),
-                              blurRadius: 1,
-                            ),
-                          ]),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      ]),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const SizedBox(
-                                width: 90,
-                                child: Text(
-                                  'Metric',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: 'Poppins',
-                                      fontSize: 13),
-                                ),
-                              ),
-                              Container(
-                                alignment: Alignment.topCenter,
-                                width: 90,
-                                child: const Text(
-                                  'Target',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: 'Poppins',
-                                      fontSize: 13),
-                                ),
-                              ),
-                              Container(
-                                alignment: Alignment.topRight,
-                                width: 90,
-                                child: const Text(
-                                  'You',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: 'Poppins',
-                                      fontSize: 13),
-                                ),
-                              ),
-                            ],
-                          ),
                           const SizedBox(
-                            height: 15,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const SizedBox(
-                                width: 90,
-                                child: Text(
-                                  'Leave hours',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w500,
-                                      fontFamily: 'Poppins',
-                                      fontSize: 13),
-                                ),
-                              ),
-                              Container(
-                                alignment: Alignment.topCenter,
-                                width: 90,
-                                child: const Text(
-                                  '45hrs',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w500,
-                                      fontFamily: 'Poppins',
-                                      fontSize: 13),
-                                ),
-                              ),
-                              Container(
-                                alignment: Alignment.topRight,
-                                width: 90,
-                                child: const Text(
-                                  '2hrs',
-                                  style: TextStyle(
-                                      color: Colors.blue,
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: 'Poppins',
-                                      fontSize: 13),
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 3,
-                          ),
-                          const Text(
-                            '27 May - 17 Aug',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'Poppins',
-                                fontSize: 11),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          const Text.rich(TextSpan(
-                              text: '₹112 per job refund',
+                            width: 90,
+                            child: Text(
+                              'Metric',
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.w600,
                                   fontFamily: 'Poppins',
                                   fontSize: 13),
-                              children: [
-                                TextSpan(
-                                  text:
-                                      ', if you maintained min criteria & we sent less than 40 jobs',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w500,
-                                      fontFamily: 'Poppins',
-                                      fontSize: 13),
-                                ),
-                              ]))
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.topCenter,
+                            width: 90,
+                            child: const Text(
+                              'Target',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 13),
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.topRight,
+                            width: 90,
+                            child: const Text(
+                              'You',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 13),
+                            ),
+                          ),
                         ],
                       ),
-                    ),
-                    Container(
-                      width: double.infinity,
-                      margin: const EdgeInsets.symmetric(
-                          vertical: 15, horizontal: 40),
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                                const Color.fromRGBO(147, 76, 234, 1),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10))),
-                        child: const Text(
-                          'Buy Again',
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const SizedBox(
+                            width: 90,
+                            child: Text(
+                              'Leave hours',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 13),
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.topCenter,
+                            width: 90,
+                            child: const Text(
+                              '45hrs',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 13),
+                            ),
+                          ),
+                          Container(
+                            alignment: Alignment.topRight,
+                            width: 90,
+                            child: const Text(
+                              '2hrs',
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 13),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 3,
+                      ),
+                      const Text(
+                        '27 May - 17 Aug',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'Poppins',
+                            fontSize: 11),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const Text.rich(TextSpan(
+                          text: '₹112 per job refund',
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.w600,
                               fontFamily: 'Poppins',
-                              fontSize: 12),
-                        ),
-                      ),
-                    )
-                  ],
+                              fontSize: 13),
+                          children: [
+                            TextSpan(
+                              text:
+                              ', if you maintained min criteria & we sent less than 40 jobs',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 13),
+                            ),
+                          ]))
+                    ],
+                  ),
                 ),
-              ),
-            ));
+                Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.symmetric(
+                      vertical: 15, horizontal: 40),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                        const Color.fromRGBO(147, 76, 234, 1),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10))),
+                    child: const Text(
+                      'Buy Again',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Poppins',
+                          fontSize: 12),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ));
   }
 
   Future _displayViewJobsBottomSheet() {
     return showModalBottomSheet(
         context: context,
         builder: (context) => Container(
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(20),
-                    topLeft: Radius.circular(20)),
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(20),
+                topLeft: Radius.circular(20)),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 25,
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(
-                    height: 25,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Text(
-                      '23/40 jobs sent',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Poppins',
-                          fontSize: 16),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: Text(
+                  '23/40 jobs sent',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'Poppins',
+                      fontSize: 16),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  'From 27 may - till date',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'Poppins',
+                      fontSize: 12),
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 5,
+                  itemBuilder: (context, index) => Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 10),
+                    margin: const EdgeInsets.only(
+                      left: 10,
+                      right: 10,
+                      bottom: 10,
                     ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(
-                      'From 27 may - till date',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Poppins',
-                          fontSize: 12),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  Expanded(
-                    child: ListView.builder(
-                      itemCount: 5,
-                      itemBuilder: (context, index) => Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 10),
-                        margin: const EdgeInsets.only(
-                          left: 10,
-                          right: 10,
-                          bottom: 10,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.grey.shade200,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x3F000000),
+                            blurRadius: 1,
+                          ),
+                        ]),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '30 Jul',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Poppins',
+                              fontSize: 15),
                         ),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.grey.shade200,
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x3F000000),
-                                blurRadius: 1,
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                            mainAxisAlignment:
+                            MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Umar Farooq',
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'Poppins',
+                                    fontSize: 15),
                               ),
-                            ]),
-                        child: const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              '30 Jul',
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'Poppins',
-                                  fontSize: 15),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Umar Farooq',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: 'Poppins',
-                                        fontSize: 15),
+                              Row(children: [
+                                Text(
+                                  'EXCLUSIVE',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontFamily: 'Poppins',
+                                      fontSize: 12),
+                                ),
+                                Padding(
+                                  padding:
+                                  EdgeInsets.symmetric(horizontal: 3.0),
+                                  child: Icon(
+                                    Icons.circle,
+                                    size: 8,
                                   ),
-                                  Row(children: [
-                                    Text(
-                                      'EXCLUSIVE',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w600,
-                                          fontFamily: 'Poppins',
-                                          fontSize: 12),
-                                    ),
-                                    Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 3.0),
-                                      child: Icon(
-                                        Icons.circle,
-                                        size: 8,
-                                      ),
-                                    ),
-                                    Text(
-                                      'ACCEPTED',
-                                      style: TextStyle(
-                                          color: Colors.lightGreen,
-                                          fontWeight: FontWeight.w600,
-                                          fontFamily: 'Poppins',
-                                          fontSize: 12),
-                                    ),
-                                  ])
-                                ]),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              'Block D, sector 61, Noida, Uttar Pradesh 201301, India',
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w600,
-                                  fontFamily: 'Poppins',
-                                  fontSize: 12),
-                            ),
-                          ],
+                                ),
+                                Text(
+                                  'ACCEPTED',
+                                  style: TextStyle(
+                                      color: Colors.lightGreen,
+                                      fontWeight: FontWeight.w600,
+                                      fontFamily: 'Poppins',
+                                      fontSize: 12),
+                                ),
+                              ])
+                            ]),
+                        SizedBox(
+                          height: 10,
                         ),
-                      ),
+                        Text(
+                          'Block D, sector 61, Noida, Uttar Pradesh 201301, India',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Poppins',
+                              fontSize: 12),
+                        ),
+                      ],
                     ),
                   ),
-                ],
+                ),
               ),
-            ));
+            ],
+          ),
+        ));
   }
 }

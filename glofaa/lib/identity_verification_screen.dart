@@ -100,18 +100,22 @@ class _IdentityVerificationScreenState
                                   fontFamily: 'Poppins',
                                   fontSize: 16),
                             ),
-                            IconButton(
-                              icon: const Icon(
-                                Icons.keyboard_arrow_right,
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Colors.white,
+                              child: IconButton(
+                                icon: const Icon(
+                                  Icons.keyboard_arrow_right,
+                                  color: Color.fromRGBO(147, 76, 234, 1),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const IdentitySectionScreen()));
+                                },
                               ),
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const IdentitySectionScreen()));
-                              },
                             )
                           ],
                         ),
@@ -136,18 +140,22 @@ class _IdentityVerificationScreenState
                                   fontFamily: 'Poppins',
                                   fontSize: 16),
                             ),
-                            IconButton(
-                              icon: const Icon(
-                                Icons.keyboard_arrow_right,
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                            CircleAvatar(
+                              radius:20,
+                              backgroundColor: Colors.white ,
+                              child: IconButton(
+                                icon: const Icon(
+                                  Icons.keyboard_arrow_right,
+                                  color: Color.fromRGBO(147, 76, 234, 1),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const PersonalDetailsStepScreen()));
+                                },
                               ),
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const PersonalDetailsStepScreen()));
-                              },
                             )
                           ],
                         ),
@@ -172,18 +180,22 @@ class _IdentityVerificationScreenState
                                   fontFamily: 'Poppins',
                                   fontSize: 16),
                             ),
-                            IconButton(
-                              icon: const Icon(
-                                Icons.keyboard_arrow_right,
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Colors.white,
+                              child: IconButton(
+                                icon: const Icon(
+                                  Icons.keyboard_arrow_right,
+                                  color: Color.fromRGBO(147, 76, 234, 1),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const VerifyDeliveryAddressScreen()));
+                                },
                               ),
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const VerifyDeliveryAddressScreen()));
-                              },
                             )
                           ],
                         ),
@@ -208,18 +220,22 @@ class _IdentityVerificationScreenState
                                   fontFamily: 'Poppins',
                                   fontSize: 16),
                             ),
-                            IconButton(
-                              icon: const Icon(
-                                Icons.keyboard_arrow_right,
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Colors.white,
+                              child: IconButton(
+                                icon: const Icon(
+                                  Icons.keyboard_arrow_right,
+                                  color: Color.fromRGBO(147, 76, 234, 1),
+                                ),
+                                onPressed: () {
+                                  /*Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                        const OnBoardingDocumentsScreen()));*/
+                                },
                               ),
-                              onPressed: () {
-                                /*Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                      const OnBoardingDocumentsScreen()));*/
-                              },
                             )
                           ],
                         ),
