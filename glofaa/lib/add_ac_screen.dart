@@ -17,6 +17,9 @@ class _AddAcScreenState extends State<AddAcScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(icon:Icon(Icons.arrow_back,color: Colors.black),
+          onPressed: ()=>Navigator.of(context).pop(),
+        ),
         title: const Text(
           'Add AC',
           style: TextStyle(

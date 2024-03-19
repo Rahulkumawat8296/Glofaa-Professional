@@ -15,6 +15,11 @@ class _OnBoardingDocumentsScreenState extends State<OnBoardingDocumentsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        //backgroundColor:Colors.purple,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back,color: Colors.black,),
+          onPressed: ()=>Navigator.of(context).pop(),
+        ),
         title: const Text(
           "On Boarding Documents",
           style: TextStyle(

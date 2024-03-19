@@ -4,7 +4,6 @@ import 'package:glofaa/starter_kit_screen.dart';
 import 'package:glofaa/training_center_screen.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-
 class CustomStepper extends StatefulWidget {
   const CustomStepper({Key? key}) : super(key: key);
 
@@ -532,3 +531,6 @@ class StepperComponent extends StatelessWidget {
     );
   }
 }
+
+
+

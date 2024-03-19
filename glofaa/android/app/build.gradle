@@ -2,6 +2,9 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
+   // id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    //id "org.jetbrains.kotlin.android" version "{kotlinVersion}" apply false
+
 }
 
 def localProperties = new Properties()
@@ -25,7 +28,7 @@ if (flutterVersionName == null) {
 android {
     namespace "com.example.glofaa"
      compileSdkVersion 33
-    ndkVersion flutter.ndkVersion
+     ndkVersion flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8

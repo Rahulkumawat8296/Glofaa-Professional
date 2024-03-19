@@ -19,6 +19,8 @@ class _RatingScreenState extends State<RatingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(icon:Icon(Icons.arrow_back,color: Colors.black
+          ,), onPressed: ()=>Navigator.of(context).pop(),),
         title: const Text(
           'Rating',
           style: TextStyle(
@@ -39,26 +41,27 @@ class _RatingScreenState extends State<RatingScreen> {
                    children: [
                      Container(
                        child: Padding(
-                         padding: const EdgeInsets.only(left:40.0),
-                         child: Text("4.78",style:TextStyle(fontSize:20,color:Colors.black),),
+                         padding: const EdgeInsets.only(left:20.0,top:20),
+                         child: Text("4.78",style:TextStyle(fontSize:35,color:Colors.black),),
                        ),
                      ),
                      Container(
                        child: Padding(
-                         padding: const EdgeInsets.only(left:40.0),
-                         child: Text("Last 20 rating"),
+                         padding: const EdgeInsets.only(left:25.0),
+                         child: Text("Last 20 rating",style: TextStyle(color:Colors.black),),
                        ),
                      ),
                      Container(
                        child: Padding(
-                           padding: const EdgeInsets.only(left:40.0),
+                           padding: const EdgeInsets.only(left:25.0,top:10),
                            child: Icon(Icons.star)
                        ),
                      ),
                      Container(
                        child: Padding(
-                         padding: const EdgeInsets.only(left:40.0),
-                         child: Text("Moin:4.5"),
+                         padding: const EdgeInsets.only(left:25.0,top:10),
+
+                         child: Text("Min:4.6"),
                        ),
                      ),
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:glofaa/rating_screen.dart';
 import 'package:semicircle_indicator/semicircle_indicator.dart';
-
 class TrackYourPerformanceScreen extends StatefulWidget {
   const TrackYourPerformanceScreen({super.key});
 
@@ -151,51 +150,48 @@ class _TrackYourPerformanceScreenState
                       ),
                     ),
                   ),
-
                 ],
               ),
             ),
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 120.0),
-                child: SemicircularIndicator(
-                  color:Colors.orange,
-                  bottomPadding: 0,
-                  child:Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left:80.0,top:35),
+                    child: SemicircularIndicator(
+                      color:Colors.orange,
+                           bottomPadding: 0,
+                      child:Column(
+                        children:[
+                          Container(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left:16.0,top:20),
+                              child: Text("4.72",style:TextStyle(fontSize:40,color:Colors.black),),
+                            ),
 
-                    children: [
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.only(left:40.0),
-                          child: Text("4.72",style:TextStyle(fontSize:20,color:Colors.black),),
-                        ),
+                               ),
+                          Container(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left:16.0),
+                              child: Icon(Icons.star),
+                            ),
+
+                          ),
+                          Container(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left:16.0),
+                              child: Text("Min:4.5",style:TextStyle(fontSize:20,color:Colors.black),),
+                            ),
+
+                          ),
+
+
+                        ],
                       ),
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.only(left:40.0),
-                          child: Icon(Icons.star)
-                        ),
-                      ),
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.only(left:40.0),
-                          child: Text("Moin:4.5"),
-                        ),
-                      ),
-
-
-
-                    ],
-
+                    ),
                   ),
 
-
-                ),
+                    ],
               ),
-            ],
-          ) ,
 
             Container(
               alignment: Alignment.center,
@@ -214,7 +210,6 @@ class _TrackYourPerformanceScreenState
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-
                     const Text(
                       'Rating',
                       style: TextStyle(
@@ -700,6 +695,12 @@ class _TrackYourPerformanceScreenState
                           fontFamily: 'Poppins',
                           fontSize: 13),
                     ),
+                    CircleAvatar(
+                      backgroundColor: Colors.red,
+                       child: CloseButton(
+                        color: Colors.white,
+                                           ),
+                     )
                   ],
                 ),
                 const SizedBox(
@@ -934,13 +935,25 @@ class _TrackYourPerformanceScreenState
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
-                child: Text(
-                  '23/40 jobs sent',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'Poppins',
-                      fontSize: 16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '23/40 jobs sent',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Poppins',
+                          fontSize: 16),
+                    ),
+                    CircleAvatar(
+                      backgroundColor: Colors.red,
+                      child: CloseButton(
+                        color: Colors.white,
+                      ),
+                    )
+
+                  ],
                 ),
               ),
               const SizedBox(

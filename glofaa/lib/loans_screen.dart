@@ -42,6 +42,11 @@ class _LoansScreenState extends State<LoansScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+
+          leading: IconButton(
+            icon:Icon(Icons.arrow_back,color:Colors.black),
+            onPressed: ()=>Navigator.of(context).pop(),
+          ),
           title: const Text(
             "Loans",
             style: TextStyle(
@@ -69,15 +74,15 @@ class _LoansScreenState extends State<LoansScreen> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      tileColor: const Color.fromRGBO(230, 210, 255, 1),
-                      leading: Icon(
-                        iconList[index],
-                        color: const Color.fromRGBO(147, 76, 234, 1),
-                      ),
+                    //  tileColor: const Color.fromRGBO(230, 210, 255, 1),
+                      // leading: Icon(
+                      //   iconList[index],
+                      //    color: const Color.fromRGBO(147, 76, 234, 1),
+                      // ),
                       title: Text(
                         list[index],
                         style: const TextStyle(
-                            color: Color.fromRGBO(147, 76, 234, 1),
+                            color: Colors.black,
                             fontWeight: FontWeight.w600,
                             fontFamily: 'Poppins',
                             fontSize: 16),
